@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout_theme"
+    android:gravity="center_horizontal">
+  <include layout="@layout/activity_title"/>
+    <RadioGroup
+        android:id="@+id/group"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="0.5dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/fans_one"
+            style="@style/selector_rbtn_red_line"
+            android:checked="true"
+            android:text="一度"/>
+
+        <RadioButton
+            android:id="@+id/fans_two"
+            style="@style/selector_rbtn_red_line"
+            android:text="二度"/>
+        <RadioButton
+            android:id="@+id/fans_three"
+            style="@style/selector_rbtn_red_line"
+            android:text="三度"/>
+
+    </RadioGroup>
+    <com.pulltorefresh.library.PullToRefreshListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none"
+        android:id="@+id/fans_list_lv"/>
+</LinearLayout>
